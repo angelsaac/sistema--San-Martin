@@ -80,11 +80,11 @@ namespace SistemaABC.Services
       }
       catch (Exception ex)
       {
-        // Manejo de errores en caso de excepción
+
         result.Id = 0;
         result.Mensaje = "Error al agregar el producto: " + ex.Message;
         result.EsValido = false;
-        result.Datos = null; // Opcional: Puedes definir cómo manejar los datos en caso de error.
+        result.Datos = null; 
       }
       return result;
     }
@@ -110,7 +110,6 @@ namespace SistemaABC.Services
       }
       catch (Exception ex)
       {
-        // Manejo de errores en caso de excepción
         result.Id = 0;
         result.Mensaje = "Error al actualizar el producto: " + ex.Message;
         result.EsValido = false;
@@ -134,7 +133,6 @@ namespace SistemaABC.Services
       }
       catch (Exception ex)
       {
-        // Manejo de errores en caso de excepción
         result.Id = 0;
         result.Mensaje = "Error al eliminar el producto: " + ex.Message;
         result.EsValido = false;
