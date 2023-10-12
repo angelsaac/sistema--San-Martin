@@ -87,10 +87,4 @@ END;
 EXEC DeleteTipoProducto @TipoProductoID = 1;
 
 */
-/*
-insert into TiposProductos(nombreTipoProducto, descripcionTipoProducto) values ('Electrodomesticos', 'Electrodomesticos para el hogar')
-select * from Producto;
-select * from TiposProductos;
-update Producto set status = 1, FechaEliminado = NULL Where status = 0
-insert into Producto values ('Ramo de flores', 'Corona de flores', 200.02, 400, 1, getdate(), getdate())
-*/
+
