@@ -4,15 +4,12 @@ using SistemaABC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ITiposProductos, ImplTiposProductos>();
 builder.Services.AddScoped<IProducto, ImplProducto>();
-// Configure Entity Framework Core
 builder.Services.AddDbContext<DbpruebaTecnicaAngelContext>(options =>
 {
   options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection"),
@@ -36,7 +33,6 @@ var app = builder.Build();
 app.UseCors("AllowAngularOrigins");
 
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
   app.UseSwagger();
