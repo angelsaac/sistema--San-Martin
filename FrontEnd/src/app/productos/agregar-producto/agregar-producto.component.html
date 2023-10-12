@@ -1,0 +1,30 @@
+<div class="container w-50 mt-3">
+  <h3>Agregar Producto</h3>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" class="form-control" [(ngModel)]="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" class="form-control" [(ngModel)]="descripcion" name="descripcion">
+    </div>
+    <div class="form-group">
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" class="form-control" [(ngModel)]="precio" name="precio" step="0.01">
+    </div>
+    <div class="form-group">
+        <label for="tipoProducto">Tipo Producto:</label>
+        <input type="number" id="tipoProducto" class="form-control" [(ngModel)]="tipoProducto" name="tipoProducto">
+      </div>
+    <div class="form-group">
+      <label for="existencia">Existencia:</label>
+      <input type="number" id="existencia" class="form-control" [(ngModel)]="existencia" name="existencia">
+    </div>
+    <div class="d-flex justify-content-between mt-3">    
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <button (click)="onBotonClick(1)" class="btn btn-danger">Regresar</button>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,7 @@
+<div [ngSwitch]="show">
+    <app-listar-producto (botonClickeado)="manejarBotonClickeado($event)" *ngSwitchCase="1"></app-listar-producto>
+    <app-agregar-producto (botonClickeado)="manejarBotonClickeado($event)" *ngSwitchCase="2"></app-agregar-producto>
+    <app-actualizar-productos (botonClickeado)="manejarBotonClickeado($event)" *ngSwitchCase="3"></app-actualizar-productos>
+    <app-tipo-productos (botonClickeado)="manejarBotonClickeado($event)" *ngSwitchCase="4"></app-tipo-productos>
+  </div>
+  
