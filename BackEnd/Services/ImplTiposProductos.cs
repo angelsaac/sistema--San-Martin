@@ -20,7 +20,6 @@ namespace SistemaABC.Services
     {
       var tiposProductos = await _context.TiposProductos.Where(tipoProducto => tipoProducto.Status != 0).ToListAsync();
 
-      // Crear una instancia de Result y configurarla según la respuesta.
       var result = new Result<List<TiposProducto>>();
 
       if (tiposProductos != null && tiposProductos.Any())
@@ -57,11 +56,10 @@ namespace SistemaABC.Services
       }
       catch (Exception ex)
       {
-        // Manejo de errores en caso de excepción
         result.Id = 0;
         result.Mensaje = "Error al agregar el Tipo Producto: " + ex.Message;
         result.EsValido = false;
-        result.Datos = null; // Opcional: Puedes definir cómo manejar los datos en caso de error.
+        result.Datos = null; 
       }
       return result;
     }
@@ -81,7 +79,6 @@ namespace SistemaABC.Services
       }
       catch (Exception ex)
       {
-        // Manejo de errores en caso de excepción
         result.Id = 0;
         result.Mensaje = "Error al eliminar el Tipo Producto: " + ex.Message;
         result.EsValido = false;
