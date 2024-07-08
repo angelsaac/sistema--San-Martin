@@ -1,4 +1,4 @@
-﻿# sistemaABCPruebaTecnica
+﻿# sistemaABC
  Sistema ABC de productos
 ﻿# BackEnd 
 Esta realizado en .net con c#, se utilizo un EntityFramework para realizar consultas mediante ORM. Base de datos en sql server cuenta con 3 procedimientos almacendos.
